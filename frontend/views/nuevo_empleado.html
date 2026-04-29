@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuevo Empleado - SICA</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <script defer src="../assets/js/auth.js"></script>
+  <script defer src="../assets/js/api.js"></script>
+  <script defer src="../assets/js/script.js"></script>
+  <script defer src="../assets/js/registro_empleado.js"></script>
+  <script defer src="../assets/js/logout.js"></script>
+</head>
+<body>
+<script>requireAuth();</script>
+<div class="container">
+    <aside class="sidebar">
+      <h2 class="logo">SICA</h2>
+      <nav>
+        <a href="index.html">Accesos</a>
+        <a href="empleados.html">Empleados</a>
+        <a href="#" class="active">Nuevo Empleado</a>
+        <a href="reportes.html">Reportes de Acceso</a>
+        <a href="acceso_facial.html">Acceso Facial</a>
+      </nav>
+      <button class="logout">Cerrar sesión</button>
+    </aside>
+
+    <main class="main">
+      <header class="header">
+        <button id="toggleTheme">🌙</button>
+        <h1>Nuevo Empleado</h1>
+        <div class="datetime">
+          <div class="date" id="currentDate"></div>
+          <div class="time" id="currentTime"></div>
+        </div>
+      </header>
+
+      <section class="form-container modern-form">
+        <form id="formEmpleado">
+          <div class="form-inputs">
+            <div class="form-group">
+              <label for="nombre">Nombre</label>
+              <input type="text" id="nombre" placeholder="Nombre" required>
+            </div>
+            <div class="form-group">
+              <label for="apellido">Apellido</label>
+              <input type="text" id="apellido" placeholder="Apellido" required>
+            </div>
+            <div class="form-group">
+              <label for="direccion">Dirección</label>
+              <input type="text" id="direccion" placeholder="Dirección" required>
+            </div>
+            <div class="form-group">
+              <label for="correo">Correo</label>
+              <input type="email" id="correo" placeholder="Correo" required>
+            </div>
+            <input type="hidden" id="id_admin" value="1">
+            <div class="form-photos">
+              <video id="video" autoplay playsinline></video>
+              <canvas id="canvas" style="display:none;"></canvas>
+              <div class="capturas" id="capturas"></div>
+              <button type="button" id="capture" class="save-btn">Subir Foto</button>
+              <button type="submit" id="registrar" class="save-btn" disabled>Guardar Registro</button>
+              <button type="reset" class="cancel-btn">Cancelar</button>
+            </div>
+            <div id="resultado"></div>
+          </div>
+        </form>
+      </section>
+    </main>
+</div>
+</body>
+</html>

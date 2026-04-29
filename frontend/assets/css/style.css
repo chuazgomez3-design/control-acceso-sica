@@ -1,0 +1,535 @@
+/* ==============================
+   Reset y base
+============================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f5f5f7;
+  color: #222;
+  transition: background 0.3s, color 0.3s;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* ==============================
+   Sidebar
+============================== */
+.sidebar {
+  width: 260px;
+  background: #ffffff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid #ddd;
+  transition: background 0.3s;
+}
+
+.sidebar .logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #4c1d95;
+  margin-bottom: 20px;
+}
+
+body.dark .sidebar .logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+
+
+.sidebar nav a {
+  display: block;
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  text-decoration: none;
+  color: #333;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+
+body.dark .sidebar nav a {
+  display: block;
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  text-decoration: none;
+  color: #ffffff;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.sidebar nav a.active,
+.sidebar nav a:hover {
+  background: #4c1d95;
+  color: #fff;
+}
+
+.logout {
+  background: #4c1d95;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* ==============================
+   Main
+============================== */
+.main {
+  flex: 1;
+  background: #f5f5f7;
+  padding: 30px;
+  transition: background 0.3s;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #4c1d95;
+}
+
+.datetime {
+  display: flex;
+  gap: 15px;
+  background: #4c1d95;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 12px;
+}
+
+#toggleTheme {
+  background: #fff;
+  border: none;
+  font-size: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 8px;
+}
+
+/* ==============================
+   Tarjetas de acceso
+============================== */
+
+.table-container {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+body.dark .table-container{
+  background-color: #1e1b4b;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #6a5af9;
+    color: white;
+}
+
+body.dark th {
+  background-color: #2e2a65;
+}
+
+.entrada {
+    color: green;
+    font-weight: bold;
+}
+
+.salida {
+    color: red;
+    font-weight: bold;
+}
+
+/* ==============================
+   Formulario Reportes
+============================== */
+.report-form {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+body.dark .report-form {
+  background: #1e1b4b;
+  color: #fff;
+}
+
+.report-form .form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.report-form .form-group label {
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+body.dark .report-form .form-group label {
+  color: #fff;
+}
+
+.report-form .form-group input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #aca7cc;
+  font-size: 14px;
+}
+
+body.dark .report-form .form-group input {
+  background: #2e2a65;
+  border: 1px solid #555;
+  color: #fff;
+}
+
+.report-form button {
+  background-color: #4c1d95;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.report-form button:hover {
+  opacity: 0.8;
+}
+
+/* ==============================
+   Resultados Reporte
+============================== */
+.report-results {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  overflow-x: auto;
+}
+
+body.dark .report-results {
+  background: #1e1b4b;
+}
+
+.report-results table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.report-results th, .report-results td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+body.dark .report-results th, 
+body.dark .report-results td {
+  border-bottom: 1px solid #555;
+  color: #fff;
+}
+
+.report-results th {
+  background: #4c1d95;
+  color: #fff;
+  border-radius: 8px;
+}
+
+body.dark .report-results th {
+  background: #705CF6;
+}
+
+/* ==============================
+   Botones generales
+============================== */
+.save-btn, .cancel-btn, .report-form button {
+    background-color: #705CF6;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.cancel-btn {
+    background-color: #8a7bff;
+}
+
+.save-btn:hover, .cancel-btn:hover, .report-form button:hover {
+    opacity: 0.8;
+}
+
+/* ==============================
+   Dark Mode
+============================== */
+body.dark {
+  background: #0f0a2a;
+  color: #fff;
+}
+
+body.dark .sidebar {
+  background: #1e1b4b;
+}
+
+body.dark .main {
+  background: #0f0a2a;
+}
+
+body.dark .access-list {
+  background: #1e1b4b;
+}
+
+body.dark .access-card {
+  background: #2e2a65;
+}
+
+body.dark .header h1 {
+  color: #fff;
+}
+
+/* ==============================
+   Formulario moderno
+============================== */
+.modern-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+body.dark .modern-form {
+  background: #1e1b4b;
+}
+
+/* Bloque de inputs y fotos alineados */
+.form-inputs, .form-photos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Inputs alineados verticalmente */
+.form-inputs .form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-inputs label {
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+body.dark .form-inputs label {
+  color: #fff;
+}
+
+.form-inputs input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: #aca7cc;
+  font-size: 14px;
+}
+
+body.dark .form-inputs input {
+  background: #2e2a65;
+  border: 1px solid #555;
+  color: #fff;
+}
+
+/* Fotos principal y extra */
+.form-photos {
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.profile-photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-photo img {
+  width: 150px;
+  height: 150px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 2px solid #4c1d95;
+  transition: 0.3s;
+}
+
+body.dark .profile-photo img {
+  border: 2px solid #705CF6;
+}
+
+.profile-photo button {
+  background-color: #4c1d95;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.profile-photo button:hover {
+  opacity: 0.8;
+}
+
+/* Fotos extra */
+.extra-photos {
+  display: grid;
+  grid-template-columns: repeat(2, 80px);
+  gap: 10px;
+}
+
+.upload-box-wrapper {
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.upload-box-wrapper img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 2px solid #4c1d95;
+  transition: 0.3s;
+}
+
+body.dark .upload-box-wrapper img {
+  border: 2px solid #705CF6;
+}
+
+.upload-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(76, 29, 149, 0.6);
+  color: white;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.upload-box-wrapper:hover .upload-box {
+  opacity: 1;
+}
+
+/* Botones generales */
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.save-btn, .cancel-btn {
+  background-color: #705CF6;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.cancel-btn {
+  background-color: #8a7bff;
+}
+
+.save-btn:hover, .cancel-btn:hover {
+  opacity: 0.8;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .form-inputs, .form-photos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .profile-photo img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .upload-box-wrapper {
+    width: 60px;
+    height: 60px;
+  }
+
+  .extra-photos {
+    grid-template-columns: repeat(2, 60px);
+  }
+}
+
+/* Efecto de nuevo registro */
+.nuevo-registro {
+    animation: parpadeo 1s ease-in-out 2;
+    background-color: #e6f7e6 !important;
+}
+
+@keyframes parpadeo {
+    0% { background-color: #e6f7e6; }
+    50% { background-color: #9df39d; }
+    100% { background-color: #ffffff; }
+}

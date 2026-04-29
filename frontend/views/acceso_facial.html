@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SICA - Acceso Facial</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <script defer src="../assets/js/auth.js"></script>
+  <script defer src="../assets/js/api.js"></script>
+  <script defer src="../assets/js/script.js"></script>
+  <script defer src="../assets/js/acceso_facial.js"></script>
+  <script defer src="../assets/js/camara.js"></script>
+  <script defer src="../assets/js/verificacion.js"></script>
+  <script defer src="../assets/js/logout.js"></script>
+</head>
+<body>
+  <script>requireAuth();</script>
+  <div class="container">
+    <aside class="sidebar">
+      <h2 class="logo">SICA</h2>
+      <nav>
+        <a href="index.html">Accesos</a>
+        <a href="empleados.html">Empleados</a>
+        <a href="nuevo_empleado.html">Nuevo Empleado</a>
+        <a href="reportes.html">Reportes de Acceso</a>
+        <a href="#" class="active">Acceso Facial</a>
+      </nav>
+      <button class="logout">Cerrar sesión</button>
+    </aside>
+
+    <main class="main">
+      <header class="header">
+        <button id="toggleTheme">🌙</button>
+        <h1>Validación Facial</h1>
+        <div class="datetime">
+          <div class="date" id="currentDate"></div>
+          <div class="time" id="currentTime"></div>
+        </div>
+      </header>
+      <section class="content">
+        <div class="form-group">
+          <label for="empleado">Empleado</label>
+          <select id="empleado"></select>
+        </div>
+        <div class="form-group">
+          <label for="tipoAcceso">Tipo de acceso</label>
+          <select id="tipoAcceso">
+            <option value="Entrada">Entrada</option>
+            <option value="Salida">Salida</option>
+          </select>
+        </div>
+        <video id="video" autoplay width="720" height="420"></video>
+        <canvas id="canvas" style="display:none;"></canvas>
+        <div class="buttons">
+          <button id="capture" class="save-btn">Validar Acceso</button>
+        </div>
+        <p id="resultado"></p>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
