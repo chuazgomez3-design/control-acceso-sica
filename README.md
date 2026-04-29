@@ -43,14 +43,14 @@ Endpoints principales:
 
 ## Variables de entorno opcionales
 
-- `DB_HOST` (default `localhost`)
-- `DB_PORT` (default `3306`)
-- `DB_USER` (default `root`)
+- `DB_HOST` (default `nombre_host`)
+- `DB_PORT` (default `puerto`)
+- `DB_USER` (default `usuario_db`)
 - `DB_PASSWORD` (default vacío)
-- `DB_NAME` (default `sica`)
+- `DB_NAME` (default `nombre_db`)
 - `FACE_RECOGNITION_REQUIRED` (`true/false`, default `false`)
 
-Puedes copiar `.env.example` a `.env` y ajustar valores según tu entorno.
+Puedes y ajustar valores según tu entorno `.env`.
 
 Con `FACE_RECOGNITION_REQUIRED=false`, si no está instalada la librería de reconocimiento facial, el sistema sigue operando en modo degradado y registra accesos sin comparación biométrica.
 <img width="3840" height="1080" alt="login" src="https://github.com/user-attachments/assets/9efabe40-914b-4c09-a36d-663882736689" />
